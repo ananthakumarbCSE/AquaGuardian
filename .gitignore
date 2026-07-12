@@ -1,0 +1,20 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Arduino
+*.ino.cpp
+
+# Node
+node_modules/
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+
+# Build
+dist/
+build/
