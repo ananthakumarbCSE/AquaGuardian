@@ -1,15 +1,22 @@
 from fastapi import FastAPI
 
+from app.core.config import settings
+from app.database.database import Base
+from app.database.database import engine
+
+from app.models import Device
+
 app = FastAPI(
-    title="AquaGuardian API",
-    description="Backend API for IoT-based Water Quality Monitoring System",
-    version="1.0.0"
+    title=settings.APP_NAME,
+    version=settings.APP_VERSION,
 )
+
+
+Base.metadata.create_all(bind=engine)
 
 
 @app.get("/")
 def root():
     return {
-        "message": "Welcome to AquaGuardian API",
-        "status": "Running"
+        "message": "AquaGuardian Backend Running"
     }

@@ -18,3 +18,18 @@ node_modules/
 # Build
 dist/
 build/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment
+backend/.env
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
