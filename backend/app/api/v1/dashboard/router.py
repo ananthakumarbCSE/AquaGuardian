@@ -8,6 +8,8 @@ from app.schemas.dashboard import LatestReadingResponse
 from app.services.dashboard_service import get_latest_reading
 from app.schemas.dashboard import ChartDataResponse
 from app.services.dashboard_service import get_chart_data
+from app.schemas.dashboard import RecentAlertResponse
+from app.services.dashboard_service import get_recent_alerts
 
 router = APIRouter(
     prefix="/dashboard",
@@ -42,3 +44,13 @@ def chart_data(
     db: Session = Depends(get_db)
 ):
     return get_chart_data(db, limit)
+
+@router.get(
+    "/recent-alerts",
+    response_model=list[RecentAlertResponse]
+)
+def recent_alerts(
+    limit: int = 10,
+    db: Session = Depends(get_db)
+):
+    return get_recent_alerts(db, limit)

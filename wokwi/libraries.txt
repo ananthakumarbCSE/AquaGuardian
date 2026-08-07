@@ -1,0 +1,8 @@
+# Wokwi Library List
+# These libraries are automatically resolved by the Wokwi simulator.
+# If using PlatformIO locally, add equivalents to platformio.ini lib_deps.
+# Note: Wire is a built-in Arduino core library and must NOT be listed here.
+LiquidCrystal I2C
+OneWire
+DallasTemperature
+ArduinoJson

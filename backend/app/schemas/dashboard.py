@@ -30,3 +30,14 @@ class ChartDataResponse(BaseModel):
     temperature: List[float]
     tds: List[int]
     turbidity: List[float]
+
+class RecentAlertResponse(BaseModel):
+    id: int
+    device_id: str
+    alert_type: str
+    severity: str
+    message: str
+    created_at: datetime
+
+    class Config:
+        from_attributes = True

@@ -107,3 +107,17 @@ def get_chart_data(
             for r in readings
         ]
     }
+
+def get_recent_alerts(
+    db: Session,
+    limit: int = 10
+):
+
+    alerts = (
+        db.query(Alert)
+        .order_by(Alert.created_at.desc())
+        .limit(limit)
+        .all()
+    )
+
+    return alerts
