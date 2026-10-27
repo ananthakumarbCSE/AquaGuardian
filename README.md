@@ -1,4 +1,4 @@
-# AquaGuardian 🌊
+# AquaGuardian 
 ### Intelligent Water Quality Monitoring and Early Warning System
 
 AquaGuardian is an IoT-based water quality monitoring platform designed to collect sensor readings, monitor water-quality indicators, detect abnormal measurements, and provide actionable alerts through a web dashboard.
